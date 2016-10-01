@@ -105,12 +105,18 @@
 <p>​    1.参数arguments</p>
 <p>​    2.返回值return</p>
 <p>​    3.没有重载，会覆盖</p>
+<h5 id="函数传参"><a href="#函数传参" class="headerlink" title="函数传参"></a>函数传参</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addTen</span>(<span class="params">num</span>)</span>&#123;</div><div class="line"></div><div class="line">		num+=<span class="number">10</span>;</div><div class="line"></div><div class="line">		<span class="keyword">return</span> num;	</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">var</span> count = <span class="number">20</span>;</div><div class="line"></div><div class="line">	<span class="keyword">var</span> res = addTen(count);</div><div class="line"></div><div class="line">	alert(count);<span class="comment">//20 参数都是按值传递的也就是都是复制一份儿不管它是基本类型还是复合类型</span></div><div class="line"></div><div class="line">	alert(res);<span class="comment">//30</span></div></pre></td></tr></table></figure>
+<p><strong>注意：对象也是按照值传递的！！</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">show</span>(<span class="params">obj</span>)</span>&#123;</div><div class="line">  obj.name = <span class="string">'leo'</span>;</div><div class="line">  <span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">  obj.name = <span class="string">'大彬哥'</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>()</div><div class="line">show(person);</div><div class="line">alert(person.name);<span class="comment">//依然是leo 清楚了吧，如果是引用那么全是 大彬哥这里是值传递</span></div></pre></td></tr></table></figure>
+<h4 id="作用域链和垃圾回收"><a href="#作用域链和垃圾回收" class="headerlink" title="作用域链和垃圾回收"></a>作用域链和垃圾回收</h4><p>1.儿子没有的东西找它老子去</p>
+<p>2.垃圾手动释放 将对应的对象直接等于null手动解除关联就行了。</p>
+<p>今天推进了82页，已经超出进度，明天讲DOM BOM和事件。重中之重。</p>
 <p>.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/01/七天一本高程三/" data-id="citqp67v600028sv4iygp9onq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/01/七天一本高程三/" data-id="citqrptlh0002ccv4hsxdlujx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -160,7 +166,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/01/markdown语法简介/" data-id="citqp67uj00008sv4dumcugl8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/01/markdown语法简介/" data-id="citqrptl00001ccv4m595osyg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -205,7 +211,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/29/hello-world/" data-id="citqp67uy00018sv4anyrhsv7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/29/hello-world/" data-id="citqrptkm0000ccv49nrv5441" class="article-share-link">Share</a>
       
       
     </footer>
