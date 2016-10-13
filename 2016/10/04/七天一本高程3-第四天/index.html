@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>七天一本高程3_第四天 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="事件​    先说一下高程3没解释清楚的概念，前面它提出根本不存在DOM0那么后面直接说DOM0级事件，这里存在一个误解
+所谓的DOM0级事件是因为DOM1主要做的是映射标签结构（XML），DOM2事件绑定，DOM3新增了DOMContentLoad等新的事件。
+DOM0级别事件绑定：
+1oBtn.onclick = show;function show()&amp;#123;alert(1)&amp;#125;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="七天一本高程3_第四天">
+<meta property="og:url" content="http://yoursite.com/2016/10/04/七天一本高程3-第四天/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="事件​    先说一下高程3没解释清楚的概念，前面它提出根本不存在DOM0那么后面直接说DOM0级事件，这里存在一个误解
+所谓的DOM0级事件是因为DOM1主要做的是映射标签结构（XML），DOM2事件绑定，DOM3新增了DOMContentLoad等新的事件。
+DOM0级别事件绑定：
+1oBtn.onclick = show;function show()&amp;#123;alert(1)&amp;#125;">
+<meta property="og:updated_time" content="2016-10-04T06:25:43.070Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="七天一本高程3_第四天">
+<meta name="twitter:description" content="事件​    先说一下高程3没解释清楚的概念，前面它提出根本不存在DOM0那么后面直接说DOM0级事件，这里存在一个误解
+所谓的DOM0级事件是因为DOM1主要做的是映射标签结构（XML），DOM2事件绑定，DOM3新增了DOMContentLoad等新的事件。
+DOM0级别事件绑定：
+1oBtn.onclick = show;function show()&amp;#123;alert(1)&amp;#125;">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-七天一本高程3-第四天" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/10/04/七天一本高程3-第四天/" class="article-date">
+  <time datetime="2016-10-04T00:49:59.000Z" itemprop="datePublished">2016-10-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      七天一本高程3_第四天
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><p>​    先说一下高程3没解释清楚的概念，前面它提出根本不存在DOM0那么后面直接说DOM0级事件，这里存在一个误解</p>
+<p>所谓的DOM0级事件是因为DOM1主要做的是映射标签结构（XML），DOM2事件绑定，DOM3新增了DOMContentLoad等新的事件。</p>
+<p>DOM0级别事件绑定：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">oBtn.onclick = show;function show()&#123;alert(1)&#125;;</div></pre></td></tr></table></figure>
+<p>DOM2级事件绑定：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">oBtn.addEventListener(&apos;click&apos;,show,false);//IE下使用attachEvent 弹出顺序不同，因为它是冒泡</div></pre></td></tr></table></figure>
+<p>这里说个大家容易疑惑的就是</p>
+<p>onmouseover和onmouseenter啥区别？</p>
+<p>事件触发情况一样，但是注意它不冒泡，之前我们说过三大不冒泡事件，其实它也是。</p>
+<h4 id="实现的乱七八糟的滚轮事件"><a href="#实现的乱七八糟的滚轮事件" class="headerlink" title="实现的乱七八糟的滚轮事件"></a>实现的乱七八糟的滚轮事件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">chrome/IE:mousehwheel 上正下负   数值用wheelDelta, 120的倍数</div><div class="line">FF:DOMMouseScroll: 上负下正	数值是detail	3的倍数</div></pre></td></tr></table></figure>
+<h4 id="HTML5事件"><a href="#HTML5事件" class="headerlink" title="HTML5事件"></a>HTML5事件</h4><p><strong>1.contextmenu右键菜单事件</strong></p>
+<p>​    记得阻止默认事件，然后这个经常在自定义菜单的时候使用。</p>
+<p><strong>2.DOMContentLoaded！！！！</strong></p>
+<p>​    移动端的onload 没有它移动端没法玩，相当重要。</p>
+<p><strong>3.readystatechange</strong></p>
+<p>​    跟楼上差不多只不过只能在IE和FF下使用。</p>
+<p><strong>4.hashChange</strong></p>
+<p>​    哈希值#后面的东西改变的时候，做路由很有用。</p>
+<p><strong>5orientationchange 手机横竖屏事件</strong></p>
+<p><strong>6.deviceorientaion</strong></p>
+<p>设备方向改变的时候。</p>
+<p><strong>7.devicemotion</strong></p>
+<p>做手机摇一摇功能必须用的事件。后面我写例子。</p>
+<p><strong>8.触摸与手势事件</strong></p>
+<p>​    不墨迹，写个无缝轮播图。</p>
+<h4 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h4><p>​    说完HMML5事件说事件委托，事件委托三句话。</p>
+<p>​    1.为了性能等等</p>
+<p>​    2.给未来元素加事件</p>
+<p>​    3.为了模拟事件。</p>
+<h4 id="canvas-真心有用开始专题说。"><a href="#canvas-真心有用开始专题说。" class="headerlink" title="canvas 真心有用开始专题说。"></a>canvas 真心有用开始专题说。</h4><p> 在说canvas和高三后半部分之前，先把之前欠的几个账不上，系统的说下</p>
+<p><strong>angular</strong></p>
+<p><strong>canvas</strong> </p>
+<p><strong>php</strong></p>
+<p><strong>git</strong></p>
+<p><strong>Gulp</strong></p>
+<p>有些人也许会怀疑你为什么那么不遗余力的去开源那些看起来很值钱很有价值的东西，我只想说当年乔布斯推出iphone的时候很多人反对，因为觉得会毁掉当前丰厚盈利的ipod给公司造成灾难性影响，但是破坏性创新是必须的，你不做那么你的竞争对手也会做，闭关锁国必然是自寻死路，后来iPhone的成功也是有目共睹的，而这些知识就是我手里的ipod。</p>
+<p>我就是要把手里看起来有竞争力的知识开源，然后倒逼创新。</p>
+<p>况且，退一步说，如果我系统的教你一遍你就能完全复制我的技术，将会有三种可能。</p>
+<p>1.我这么多年的编程白混了。</p>
+<p>2.如果短时让菜鸟也能拥有我的知识那么我将短时间积累大量财富。</p>
+<p>3.你太聪明了。</p>
+<p>第一条，我用了超过十年的时间编程，能给那么多人讲课所以我不认为自己是白混了。</p>
+<p>第二条，确实大量的学生上完课以后找到了让人羡慕的工作，但是短期复制并不容易（虽然我在尝试让小白21天上手，但是还仅仅是尝试）</p>
+<p>第三条，如果你真的太聪明了相信你也不用看我的东西，你早就去讲课了。</p>
+<p>所以有两点能保证，认真看我写过的东西，坚持下来一定会让你的工资大幅增长，反正很多人已经涨了，你不涨关我什么事，我又没收你钱只能说你活该。二，知识绝对是有含金量的，</p>
+<p>​    </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/10/04/七天一本高程3-第四天/" data-id="ciu8jlj5m0004jkv45bbr7a6w" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/10/04/anuglar01/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Nieuwer</strong>
+      <div class="article-nav-title">
+        
+          anuglar01
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/10/03/七天一本高程3——-第三天/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ouder</strong>
+      <div class="article-nav-title">七天一本高程3——-第三天</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archieven</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recente berichten</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/10/05/node/">node</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/05/php/">php</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/04/anuglar01/">anuglar01</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/04/七天一本高程3-第四天/">七天一本高程3_第四天</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/03/七天一本高程3——-第三天/">七天一本高程3——-第三天</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
